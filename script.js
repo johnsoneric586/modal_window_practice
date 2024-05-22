@@ -29,4 +29,8 @@ btnCloseModal.addEventListener('click', hideModal);
 
 overlay_el.addEventListener('click', hideModal); // closes modal if you click outside of the main modal window
 
-document.addEventListener('keydown', hideModal); // closes modal with a global "keydown" event. Global events are added on the "document" object rather than a specific DOM element
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    hideModal();
+  }
+}); // closes modal with a global "keydown" event. Global events are added on the "document" object rather than a specific DOM element. The "keydown" event creates an object that has properties such as "key" which can be accessed to perform certain functions, as seen above.

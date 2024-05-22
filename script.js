@@ -27,3 +27,5 @@ btnShowModal.forEach(function (button) {
 });
 
 btnCloseModal.addEventListener('click', hideModal);
+
+overlay_el.addEventListener('click', hideModal); // Closes modal if you click outside of the main modal window

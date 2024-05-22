@@ -42,6 +42,11 @@ body {
   cursor: pointer;
   border: none;
   background: none;
+  transition: all 0.2s ease;
+}
+
+.close-modal:hover {
+  transform: scale(1.1);
 }
 
 h1 {

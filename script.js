@@ -10,7 +10,6 @@ const modal_el = document.querySelector('.modal');
 const overlay_el = document.querySelector('.overlay');
 
 // ---------- Functions ----------
-
 function revealModal() {
   modal_el.classList.remove('hidden');
   overlay_el.classList.remove('hidden');
@@ -28,4 +27,6 @@ btnShowModal.forEach(function (button) {
 
 btnCloseModal.addEventListener('click', hideModal);
 
-overlay_el.addEventListener('click', hideModal); // Closes modal if you click outside of the main modal window
+overlay_el.addEventListener('click', hideModal); // closes modal if you click outside of the main modal window
+
+document.addEventListener('keydown', hideModal); // closes modal with a global "keydown" event. Global events are added on the "document" object rather than a specific DOM element
